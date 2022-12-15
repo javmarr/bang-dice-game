@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="src/script.js"></script>
+</head>
+
+<body onload="resetLocks()">
+    <div class="container">
+        <h1>BANG!! Dice Roller</h1>
+        <div class="container bottom">
+            <h2 id="rollCount">Roll Number: 0</h2>
+            <h3 id="maxRolls" hidden>MAX ROLLS</h3>
+            <button id="resetButton" class="roll" onClick="reset()" hidden> Reset </button>
+            <button id="rollButton" class="roll" onClick="rollDice()"> Roll the dice </button>
+            <table class="diceContainer">
+                <tr>
+                    <td></td>
+                    <td><img class="dice" id="dice0" src="img/1.png"></td>
+                    <td><img class="dice" id="dice1" src="img/2.png"></td>
+                    <td><img class="dice" id="dice2" src="img/3.png"></td>
+                    <td><img class="dice" id="dice3" src="img/4.png"></td>
+                    <td><img class="dice" id="dice4" src="img/5.png"></td>
+                </tr>
+                <tr>
+                    <td>Keep</td>
+                    <td><input class="lock" id="lock0" type="checkbox"></td>
+                    <td><input class="lock" id="lock1" type="checkbox"></td>
+                    <td><input class="lock" id="lock2" type="checkbox"></td>
+                    <td><input class="lock" id="lock3" type="checkbox"></td>
+                    <td><input class="lock" id="lock4" type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <hr>
+        <h2> Character selector </h2>
+        <button id="characterButton" onClick="getCharacters(8)">Roll Characters</button>
+        <br>
+        <ol id="characterBox"></ol>
+
+</body>
+
+</html>
