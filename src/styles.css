@@ -2,6 +2,18 @@
     color: red
 }
 
+#resetButton {
+    background-color: grey;
+}
+
+#resetButton:hover {
+    background-color: rgb(98, 98, 98);
+}
+
+#rollButton:hover {
+    background-color: rgb(9, 116, 14);
+}
+
 td {
     text-align: center;
 }
@@ -24,3 +36,15 @@ td {
     90% {transform: translate(1px, 2px) rotate(0deg);}
     100% {transform: translate(1px, -2px) rotate(-1deg);}
 }
+
+.container .btn {
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(23, 153, 29);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+

@@ -11,18 +11,19 @@
             <h1>BANG!! Dice Roller</h1>
             <h2 id="rollCount">Roll Number: 0</h2>
             <h3 id="maxRolls" hidden>MAX ROLLS</h3>
-            <button id="resetButton" class="roll" onClick="reset()" hidden> Reset </button>
-            <button id="rollButton" class="roll" onClick="rollDice()"> Roll the dice </button>
+            <button id="resetButton" class="btn" onClick="reset()" hidden> Reset </button>
+            <button id="rollButton" class="btn" onClick="rollDice()"> Roll the dice </button>
+            
             <table class="diceContainer">
                 <tr>
                     <td></td>
-                    <td><img class="dice" id="dice0" src="img/1.png"></td>
-                    <td><img class="dice" id="dice1" src="img/2.png"></td>
-                    <td><img class="dice" id="dice2" src="img/3.png"></td>
-                    <td><img class="dice" id="dice3" src="img/4.png"></td>
-                    <td><img class="dice" id="dice4" src="img/5.png"></td>
+                    <td><img onClick="toggleLock(this)" class="dice" id="dice0" src="img/1.png"></td>
+                    <td><img onClick="toggleLock(this)" class="dice" id="dice1" src="img/2.png"></td>
+                    <td><img onClick="toggleLock(this)" class="dice" id="dice2" src="img/3.png"></td>
+                    <td><img onClick="toggleLock(this)" class="dice" id="dice3" src="img/4.png"></td>
+                    <td><img onClick="toggleLock(this)" class="dice" id="dice4" src="img/5.png"></td>
                 </tr>
-                <tr>
+                <tr id="keepRow" hidden>
                     <td>Keep</td>
                     <td><input class="lock" id="lock0" type="checkbox"></td>
                     <td><input class="lock" id="lock1" type="checkbox"></td>

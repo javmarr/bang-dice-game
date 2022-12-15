@@ -6,6 +6,12 @@ var rollCount = 0;
 function reset() {
     window.location.reload();
 }
+
+function toggleLock(target) {
+    var lockId = "lock" + target.getAttribute("id").substr(-1);
+    document.getElementById(lockId).checked = !document.getElementById(lockId).checked;
+}
+
 // remove checkboxes on page load
 function resetLocks() {
     var locks = document.getElementsByClassName("lock");
@@ -57,6 +63,13 @@ function rollDice() {
 
         // remove roll button
         document.getElementById("rollButton").setAttribute("hidden", "");
+    }
+    
+    // show "Keep" row
+    console.log("count is:" + rollCount);
+    if (rollCount > 0) {
+        console.log("count is:" + rollCount);
+        document.getElementById("keepRow").removeAttribute("hidden");
     }
 
     animateDice();
