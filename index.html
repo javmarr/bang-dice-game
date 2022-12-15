@@ -7,8 +7,8 @@
 
 <body onload="resetLocks()">
     <div class="container">
-        <h1>BANG!! Dice Roller</h1>
-        <div class="container bottom">
+        <div class="top" align="center">
+            <h1>BANG!! Dice Roller</h1>
             <h2 id="rollCount">Roll Number: 0</h2>
             <h3 id="maxRolls" hidden>MAX ROLLS</h3>
             <button id="resetButton" class="roll" onClick="reset()" hidden> Reset </button>
@@ -32,15 +32,18 @@
                 </tr>
             </table>
         </div>
-        
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <hr>
-        <h2> Character selector </h2>
-        <button id="characterButton" onClick="getCharacters(8)">Roll Characters</button>
-        <br>
-        <ol id="characterBox"></ol>
 
+        <div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+        </div>
+        <div class="bottom">
+            <h2> Character selector </h2>
+            <button id="characterButton" onClick="getCharacters(8)">Roll Characters</button>
+            <br>
+            <ol id="characterBox"></ol>
+        </div>
 </body>
 
 </html>
