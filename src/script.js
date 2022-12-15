@@ -8,8 +8,11 @@ function reset() {
 }
 
 function toggleLock(target) {
-    var lockId = "lock" + target.getAttribute("id").substr(-1);
-    document.getElementById(lockId).checked = !document.getElementById(lockId).checked;
+    // only toggle is the Keep row is shown
+    if (!document.getElementById("keepRow").hasAttribute("hidden")) {   
+        var lockId = "lock" + target.getAttribute("id").substr(-1);
+        document.getElementById(lockId).checked = !document.getElementById(lockId).checked;
+    }
 }
 
 // remove checkboxes on page load
