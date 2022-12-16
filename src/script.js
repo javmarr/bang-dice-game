@@ -1,7 +1,14 @@
-var MAX_ROLLS = 3
-var LOCK_DYNAMITE = true;
+const MAX_ROLLS = 3
+// locks dynamite by default when rolling
+const LOCK_DYNAMITE = true;
+// what dice face is the dynamite
+const DYNAMITE_DICE_FACE = 5; 
 var displayedResult = [1, 2, 3, 4, 5];
 var rollCount = 0;
+
+const numberOfOccurances = (array, item) => {
+    return array.filter((currentItem) => currentItem == item).length;
+};
 
 function reset() {
     window.location.reload();
@@ -59,7 +66,8 @@ function rollDice() {
     document.getElementById("rollCount").textContent = "Roll Number: " + rollCount
     console.log(displayedResult);
 
-    if (rollCount >= MAX_ROLLS) {
+    // check if MAX_ROLLS reached or rolled 3+ dynamite
+    if (rollCount >= MAX_ROLLS || numberOfOccurances(displayedResult, DYNAMITE_DICE_FACE) >= 3) {
         // show reset button
         document.getElementById("maxRolls").removeAttribute("hidden");
         document.getElementById("resetButton").removeAttribute("hidden");
@@ -69,9 +77,8 @@ function rollDice() {
     }
     
     // show "Keep" row
-    console.log("count is:" + rollCount);
+    // console.log("count is:" + rollCount);
     if (rollCount > 0) {
-        console.log("count is:" + rollCount);
         document.getElementById("keepRow").removeAttribute("hidden");
     }
 
